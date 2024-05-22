@@ -65,16 +65,11 @@ header {
     max-width: 50%;;
 }
 
-#logo {
+.logo {
     margin: 0 1rem 0 0;
 }
 
-.img-feature {
-    width: 100%;
-    overflow: hidden;
-}
-
-#food {
+.hero-food {
     object-fit: cover;
     object-position: center;
     width: 100%;
@@ -89,21 +84,29 @@ main {
     flex-wrap: wrap;
 }
 
-section {
+article {
     background-color: var(--section-color);
     flex: 1;
     padding: 1rem 0;
 }
 
-section.ingredients {
-    padding-left: 2rem
+article.ingredients {
+    padding-left: 2rem;
+    flex: 0.5;
 }
 
-section.ingredients > ul {
-    padding-left: 1rem;
+article.ingredients > ul {
+    list-style: none;
 }
 
-section.instructions {
+article.ingredients > ul > li {
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 0.3rem 0.5rem;
+    margin-bottom: 0.3rem;
+}
+
+article.instructions {
     padding-right: 2rem;
     padding-left: 3rem;
 }
@@ -141,4 +144,8 @@ footer > h2 {
 footer > ul {
     text-align: center;
     list-style: none;
+}
+
+.bold {
+    font-weight: 800;
 }
