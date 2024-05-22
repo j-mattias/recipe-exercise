@@ -32,20 +32,14 @@ header {
     justify-content: center;
 }
 
-.container {
-    width: 50%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-}
-
 .recipe {
     display: flex;
     align-items: center;
 }
 
-.recipe > h1 {
-    display: inline;
+.logo {
+    margin: 0 1rem 0 0;
+    width: 5rem;
 }
 
 .desc {
@@ -65,11 +59,6 @@ header {
     max-width: 50%;;
 }
 
-.logo {
-    margin: 0 1rem 0 0;
-    width: 5rem;
-}
-
 .hero-food {
     object-fit: cover;
     object-position: center;
@@ -77,7 +66,7 @@ header {
     height: 20rem;
 }
 
-main {
+article {
     width: 50%;
     display: flex;
     justify-content: center;
@@ -85,31 +74,49 @@ main {
     flex-wrap: wrap;
 }
 
-article {
+section:not(.container, .contact) {
     background-color: var(--section-color);
     flex: 1;
     padding: 1rem 0;
 }
 
-article.ingredients {
+.container {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+section.ingredients {
     padding-left: 2rem;
     flex: 0.5;
 }
 
-article.ingredients > ul {
+section.ingredients > ul {
     list-style: none;
 }
 
-article.ingredients > ul > li {
+section.ingredients > ul > li {
     border: 1px solid black;
     border-radius: 8px;
     padding: 0.3rem 0.5rem;
     margin-bottom: 0.3rem;
 }
 
-article.instructions {
+section.instructions {
     padding-right: 2rem;
     padding-left: 3rem;
+}
+
+section.contact > h2 {
+    margin: auto;
+    flex: 1;
+    text-align: center;
+}
+
+section.contact > ul {
+    text-align: center;
+    list-style: none;
 }
 
 h1, h2, h3 {
@@ -135,16 +142,6 @@ footer {
     align-items: center;
     background-color: var(--footer-color);
     padding: 2rem 0;
-}
-
-footer > h2 {
-    margin: auto;
-    flex: 1;
-}
-
-footer > ul {
-    text-align: center;
-    list-style: none;
 }
 
 .bold {
